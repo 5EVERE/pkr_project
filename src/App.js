@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./Components/Header";
+import Item from "./Components/Item";
+import Main from "./Components/Main";
+import Cart from "./Components/Cart";
+import LogForm from "./Components/LogForm"
+import "./App.css";
 
 function App() {
+  const [modal, setModal] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header setModal={setModal} />
+      <Main />
+      <Item></Item>
+      <Cart
+        isOpened={modal}
+        title={"Modal Title"}
+        onModalClose={() => setModal(false)}
+      />
+      <LogForm></LogForm>
+    </React.Fragment>
   );
 }
 

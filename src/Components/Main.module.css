@@ -1,0 +1,23 @@
+.section {
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.active-img {
+  position: absolute;
+}
+.slider {
+  width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.slider-img {
+  margin: 0 auto;
+  margin-top: 150px;
+}
